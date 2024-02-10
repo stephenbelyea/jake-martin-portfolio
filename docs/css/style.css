@@ -153,3 +153,14 @@ nav > a[href] {
   font-size: var(--font-size-small);
   margin-top: auto;
 }
+
+@media screen and (max-width: 650px) {
+  .layout.split {
+    display: block;
+  }
+
+  .layout.split > aside,
+  .layout.split > article {
+    margin: 1rem 0;
+  }
+}
