@@ -1,0 +1,155 @@
+:root {
+  --font-family-heading: "Rasa", sans-serif;
+  --font-family-body: "Mulish", serif;
+
+  --font-size-small: 0.85em;
+  --font-size-body: 1.15rem;
+  --font-size-heading-1: 3.5em;
+  --font-size-heading-2: 2em;
+  --font-size-sub-heading: 1.75em;
+
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-heading-medium: 400;
+  --font-weight-heading-bold: 600;
+
+  --color-white: #fff;
+  --color-grey: #212529;
+  --color-black: #000;
+  --color-green-light: #20c997;
+  --color-green-dark: #26755e;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-body);
+  line-height: 1.5;
+  color: var(--color-grey);
+}
+
+h1,
+h1 + p,
+h2 {
+  font-family: var(--font-family-heading);
+}
+
+h1 {
+  font-size: var(--font-size-heading-1);
+  font-weight: var(--font-weight-heading-bold);
+  color: var(--color-green-light);
+  line-height: 1;
+  margin: 0;
+}
+
+h1 + p {
+  font-size: var(--font-size-sub-heading);
+  font-weight: var(--font-weight-heading-medium);
+  line-height: 1.15;
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--font-size-heading-2);
+  font-weight: var(--font-weight-heading-bold);
+  color: var(--color-green-dark);
+  line-height: 1;
+  margin: 0 0 0.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+strong {
+  font-weight: var(--font-weight-bold);
+}
+
+a[href] {
+  color: var(--color-green-dark);
+  text-decoration: none;
+  box-shadow: 0 0.1em 0 0 var(--color-green-dark);
+  transition: color 150ms, box-shadow 150ms;
+}
+
+a[href]:hover,
+a[href]:focus {
+  color: var(--color-black);
+  box-shadow: 0 0.2em 0 0 var(--color-black);
+}
+
+nav > a[href] {
+  line-height: 1.25;
+  margin: 0 0 0.35em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.container > .wrap {
+  flex: 0 0 auto;
+}
+
+.container > main {
+  flex: 1 0 auto;
+  padding: 2rem 0;
+}
+
+.wrap {
+  width: 100%;
+  padding: 1em 0;
+}
+
+.layout {
+  width: 90vw;
+  max-width: 42rem;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.layout.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.layout.end {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 1.75rem;
+}
+
+.layout.split > article {
+  flex: 1 1 2fr;
+}
+
+.layout.split > aside {
+  flex: 1 1 1fr;
+}
+
+.wrap.header,
+.wrap.footer {
+  background: var(--color-grey);
+  color: var(--color-white);
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+.wrap.footer {
+  font-size: var(--font-size-small);
+  margin-top: auto;
+}
